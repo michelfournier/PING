@@ -22,7 +22,7 @@ public class ballScript : MonoBehaviour
 
         float yVelocity = UnityEngine.Random.Range(-1, 1f); // randomize the up/down directions
 
-        myRigidBody.velocity = new Vector2(xVelocity * ballSpeed, yVelocity * ballSpeed);
+        myRigidBody.velocity = new Vector2(xVelocity * ballSpeed, yVelocity * ballSpeed); // initiate the "push" toward radom x and y value * speed
 
     }
 
