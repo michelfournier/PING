@@ -7,6 +7,9 @@ public class ballScript : MonoBehaviour
     public Rigidbody2D myRigidBody;
     public float ballSpeed;
 
+
+   
+
     // Start is called before the first frame update
     void Start()
     {   
@@ -24,14 +27,19 @@ public class ballScript : MonoBehaviour
 
         myRigidBody.velocity = new Vector2(xVelocity * ballSpeed, yVelocity * ballSpeed); // initiate the "push" toward radom x and y value * speed
 
+       
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        // myRigidBody.velocity = Vector2(something) * ballSpeed; when 
+        
 
         // if ball touches invisible triggers, point to opponent. respawn ball
+         
        
     }
+
+
 }
