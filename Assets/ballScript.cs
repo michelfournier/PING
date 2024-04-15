@@ -5,7 +5,7 @@ using UnityEngine;
 public class ballScript : MonoBehaviour
 {
     public Rigidbody2D myRigidBody;
-    public float ballSpeed;
+    public float ballSpeed; //make selection of speed at the splash screen so it that value can modified both the original and clones
 
 
    
