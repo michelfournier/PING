@@ -12,13 +12,12 @@ public class MainMenu : MonoBehaviour
     
     public void PlayCPU()
     {
-        SceneManager.LoadSceneAsync(1);
+        SceneManager.LoadSceneAsync(2);
     }
 
     public void Quitgame()
     {
-        Application.Quit();
-        Debug.Log("Quitting");
+        Application.Quit();        
     }
 
 }

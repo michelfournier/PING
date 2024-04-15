@@ -644,27 +644,14 @@ GameObject:
   - component: {fileID: 1549236803}
   - component: {fileID: 1549236802}
   - component: {fileID: 1549236801}
-  - component: {fileID: 1549236800}
+  - component: {fileID: 1549236804}
   m_Layer: 0
-  m_Name: player2
+  m_Name: CPU
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1549236800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1549236799}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71dce8bb0dc3d01439a901a2fa099613, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
 --- !u!61 &1549236801
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -777,6 +764,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1549236804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549236799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfd2173727d4ff24ba2d106e1026d7ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  startingPosition: {x: 7.5, y: 0}
+  bottomBounds: -5.1
+  topBounds: 5.02
+  ball: {fileID: 145647978851174105, guid: 7b3a1d8e072475547b3f2b12839cc200, type: 3}
 --- !u!1001 &1572193081
 PrefabInstance:
   m_ObjectHideFlags: 0
