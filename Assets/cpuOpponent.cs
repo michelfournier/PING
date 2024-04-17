@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -14,6 +15,8 @@ public class cpuOpponent : MonoBehaviour
 
     private Vector2 ballPos;
 
+    private float previousBall = 0f;
+
       
     // Start is called before the first frame update
     void Start()
@@ -25,22 +28,20 @@ public class cpuOpponent : MonoBehaviour
     void Update()
     {
         Move();
+        
     }
 
+    //--------------------------- Methods -----------------------------
     public void Move()
     {
 
-       if (!ball) 
-       {
-        ball = GameObject.FindGameObjectWithTag("ballz");//bob
-       }
+        ball = GameObject.FindGameObjectWithTag("ballz");//get the ball
+       
+        ballPos = ball.transform.position; //get the ball location
 
-       //Debug.Log(ball.GetComponent<ballScript>().myRigidBody.velocity.ToString());  only gets (0.00, 0.00)
-
-        //if (ball.GetComponent<ballScript>().myRigidBody.velocity == Vector2.right)
-       //{
-            ballPos = ball.transform.localPosition; //get ball location
-            Debug.Log(ballPos.ToString()); //(-0.04, -0.05) only. as if it didn't change
+        if (ballPos.x >= previousBall) //cpu  medium. harder is no is-statement here, easier is >= 0
+        { 
+         
             if (transform.localPosition.y > bottomBounds && ballPos.y < transform.localPosition.y) //if paddle is higher than botttom but higher than the ball
             {
                 transform.localPosition += new Vector3 (0, -moveSpeed * Time.deltaTime, 0); //will move down at set movespeed
@@ -50,6 +51,9 @@ public class cpuOpponent : MonoBehaviour
             {
                 transform.localPosition += new Vector3 (0, moveSpeed * Time.deltaTime, 0); //will move up at set movespeed
             }
-       // }
+        }
+
+        previousBall = ballPos.x; //record the ball's X position as the Next frame's previous X position
+       
     }
 }

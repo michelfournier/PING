@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myRigidBody: {fileID: 5596849301672124741}
-  ballSpeed: 3
+  ballSpeed: 4
 --- !u!50 &5596849301672124741
 Rigidbody2D:
   serializedVersion: 4

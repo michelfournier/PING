@@ -284,7 +284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82f71c432ba111c4d83b936933336f01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 3
 --- !u!212 &582343231
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1164,7 +1164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71dce8bb0dc3d01439a901a2fa099613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 3
 --- !u!1 &2138934250
 GameObject:
   m_ObjectHideFlags: 0
@@ -1331,7 +1331,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 514385273835090326, guid: 7b3a1d8e072475547b3f2b12839cc200, type: 3}
       propertyPath: ballSpeed
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6444258312515270330, guid: 7b3a1d8e072475547b3f2b12839cc200, type: 3}
       propertyPath: m_LocalPosition.x
