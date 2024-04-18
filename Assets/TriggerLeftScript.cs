@@ -8,13 +8,16 @@ public class TriggerLeftScript : MonoBehaviour
 
     public LogicScript logic;
     public GameObject ball;
+
     private float timeDelay = 1;
 
-    private bool ballDestroyed = false;
+    public bool ballDestroyed = false;
+
     // Start is called before the first frame update
     void Start()
     {
-        logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>(); 
+        logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
+ 
      
     }
 
@@ -34,6 +37,9 @@ public class TriggerLeftScript : MonoBehaviour
                 
                 ballDestroyed = false;
                 Instantiate(ball, new Vector3(0, 0, 0), transform.rotation);
+                
+
+
    
             }
             
@@ -44,12 +50,13 @@ public class TriggerLeftScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         logic.addScoreP2(1);
-        Debug.Log("+1 for P2");
+
         Destroy(GameObject.FindGameObjectWithTag("ballz"));
-        Debug.Log("Destroyed");
+        
         timeDelay = 1000f;
+        
         ballDestroyed = true;
-        Debug.Log(ballDestroyed);     
+             
 
     }    
 }

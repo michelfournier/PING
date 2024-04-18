@@ -15,6 +15,17 @@ public class LogicScript : MonoBehaviour
     public Text scoreText2;
     public GameObject gameOverScreen;
 
+    
+
+
+    public float ballRate;
+
+    public float p1Rate;
+
+    public float p2Rate; 
+
+ 
+
 
     public void restartGame()
     {
