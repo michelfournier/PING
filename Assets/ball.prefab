@@ -103,8 +103,6 @@ MonoBehaviour:
   ballSpeed: 4
   ballCanStart: 1
   logic: {fileID: 0}
-  totalScore1: 0
-  totalScore2: 0
 --- !u!50 &5596849301672124741
 Rigidbody2D:
   serializedVersion: 4

@@ -17,16 +17,21 @@ public class cpuOpponent : MonoBehaviour
 
     private float previousBall = 0f;
 
+    public LogicScript logic;
+
       
     // Start is called before the first frame update
     void Start()
     {
         transform.localPosition = (Vector3)startingPosition;
+        logic = GameObject.Find("LogicSystem").GetComponent<LogicScript>();
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        moveSpeed = logic.p2Rate;
         Move();
         
     }
@@ -39,7 +44,7 @@ public class cpuOpponent : MonoBehaviour
        
         ballPos = ball.transform.position; //get the ball location
 
-        if (ballPos.x >= previousBall) //cpu  medium. harder is no is-statement here, easier is >= 0
+        if (ballPos.x >= 0) //cpu  medium = previousBall. harder is no if-statement here, easier is >= 0
         { 
          
             if (transform.localPosition.y > bottomBounds && ballPos.y < transform.localPosition.y) //if paddle is higher than botttom but higher than the ball
