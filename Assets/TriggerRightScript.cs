@@ -20,8 +20,9 @@ public class TriggerRightScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (ballDestroyed == true)
+        if (ballDestroyed == true && logic.player1Score != 11 && logic.player2Score != 11)
         {   
+            timeDelay = 5000f;
             while (timeDelay > 0) 
             {
                 timeDelay -= Time.deltaTime;

@@ -15,7 +15,7 @@ public class LogicScript : MonoBehaviour
     public Text scoreText2;
     public GameObject gameOverScreen;
 
-    
+    public Text winnerText;
 
 
     public float ballRate;
@@ -24,13 +24,15 @@ public class LogicScript : MonoBehaviour
 
     public float p2Rate; 
 
- 
 
-
-    public void restartGame()
+    void Update()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        if (player1Score == 11 || player2Score == 11)
+        {
+            gameOver();
+        }  
     }
+
 
     public void addScoreP1(int scoreToAdd)
     {
@@ -46,16 +48,14 @@ public class LogicScript : MonoBehaviour
 
     public void gameOver()
     {
-        gameOverScreen.SetActive(true);    // TO DO
+        gameOverScreen.SetActive(true);
+        if (player1Score == 11) {
+            winnerText.text = "Player 1 wins!";
+        }
+        if (player2Score == 11) {
+            winnerText.text = "Player 2 wins!";
+        }        
 
-    }
-
-    void Update()
-    {
-        /*if (player1Score == 21 || player2Score == 21)
-        {
-            
-        } */ // TO DO
     }
 
 

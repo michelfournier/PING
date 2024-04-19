@@ -17,15 +17,15 @@ public class TriggerLeftScript : MonoBehaviour
     void Start()
     {
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
- 
-     
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (ballDestroyed == true)
+        if (ballDestroyed == true && logic.player1Score != 11 && logic.player2Score != 11)
         {   
+            timeDelay = 5000f;
             while (timeDelay > 0) 
             {
                 timeDelay -= Time.deltaTime;
@@ -37,10 +37,7 @@ public class TriggerLeftScript : MonoBehaviour
                 
                 ballDestroyed = false;
                 Instantiate(ball, new Vector3(0, 0, 0), transform.rotation);
-                
 
-
-   
             }
             
         }

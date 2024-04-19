@@ -25,6 +25,7 @@ public class cpuOpponent : MonoBehaviour
     {
         transform.localPosition = (Vector3)startingPosition;
         logic = GameObject.Find("LogicSystem").GetComponent<LogicScript>();
+        
     }
 
     // Update is called once per frame
@@ -41,24 +42,28 @@ public class cpuOpponent : MonoBehaviour
     {
 
         ball = GameObject.FindGameObjectWithTag("ballz");//get the ball
+
+        if (ball) // if there is a ball at all do the following
+        {
+
+            ballPos = ball.transform.position; //get the ball location
+
+            if (ballPos.x >= 0) //cpu  medium = previousBall. harder is no if-statement here, easier is >= 0
+            { 
+            
+                if (transform.localPosition.y > bottomBounds && ballPos.y < transform.localPosition.y) //if paddle is higher than botttom but higher than the ball
+                {
+                    transform.localPosition += new Vector3 (0, -moveSpeed * Time.deltaTime, 0); //will move down at set movespeed
+                }
+
+                if (transform.localPosition.y < topBounds && ballPos.y > transform.localPosition.y) //if paddle is lower than top but lower than the ball
+                {
+                    transform.localPosition += new Vector3 (0, moveSpeed * Time.deltaTime, 0); //will move up at set movespeed
+                }
+            }
+
+            previousBall = ballPos.x; //record the ball's X position as the Next frame's previous X position
        
-        ballPos = ball.transform.position; //get the ball location
-
-        if (ballPos.x >= 0) //cpu  medium = previousBall. harder is no if-statement here, easier is >= 0
-        { 
-         
-            if (transform.localPosition.y > bottomBounds && ballPos.y < transform.localPosition.y) //if paddle is higher than botttom but higher than the ball
-            {
-                transform.localPosition += new Vector3 (0, -moveSpeed * Time.deltaTime, 0); //will move down at set movespeed
-            }
-
-            if (transform.localPosition.y < topBounds && ballPos.y > transform.localPosition.y) //if paddle is lower than top but lower than the ball
-            {
-                transform.localPosition += new Vector3 (0, moveSpeed * Time.deltaTime, 0); //will move up at set movespeed
-            }
         }
-
-        previousBall = ballPos.x; //record the ball's X position as the Next frame's previous X position
-       
     }
 }
