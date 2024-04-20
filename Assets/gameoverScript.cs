@@ -7,9 +7,9 @@ using Unity.VisualScripting;
 
 public class gameoverScript : MonoBehaviour
 {
-    
+    public GameObject pauseMenu;
 
-    public void rematch()
+    public void Rematch()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
@@ -21,9 +21,15 @@ public class gameoverScript : MonoBehaviour
     }
 
 
-    public void backToMainMenu()
+    public void BackToMainMenu()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void ResumePlay()
+    {      
+        pauseMenu.SetActive(false);
+      
     }
 
 }

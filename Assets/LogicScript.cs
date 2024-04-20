@@ -15,6 +15,10 @@ public class LogicScript : MonoBehaviour
     public Text scoreText2;
     public GameObject gameOverScreen;
 
+    public GameObject pauseMenu;
+
+    public GameObject setMenu;
+
     public Text winnerText;
 
 
@@ -30,6 +34,21 @@ public class LogicScript : MonoBehaviour
         if (player1Score == 11 || player2Score == 11)
         {
             gameOver();
+        }
+
+        if (pauseMenu.activeSelf == true)
+        {
+            Time.timeScale = 0f;
+        }
+        else{
+            Time.timeScale = 1f;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape) && gameOverScreen.activeSelf == false && setMenu.activeSelf == false)
+        {
+            
+            pauseMenu.SetActive(true);
+
         }  
     }
 
