@@ -19,13 +19,15 @@ public class cpuOpponent : MonoBehaviour
 
     public LogicScript logic;
 
+    AudioSource audioSound;
+
       
     // Start is called before the first frame update
     void Start()
     {
         transform.localPosition = (Vector3)startingPosition;
         logic = GameObject.Find("LogicSystem").GetComponent<LogicScript>();
-        
+        audioSound = GetComponent<AudioSource>();        
     }
 
     // Update is called once per frame
@@ -66,4 +68,10 @@ public class cpuOpponent : MonoBehaviour
        
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        audioSound.Play();             
+
+    }        
 }

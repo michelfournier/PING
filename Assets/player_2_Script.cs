@@ -7,11 +7,13 @@ public class player_2_Script : MonoBehaviour
     public float moveSpeed;
 
     public LogicScript logic;
+    AudioSource audioSound;
       
     // Start is called before the first frame update
     void Start()
     {
         logic = GameObject.Find("LogicSystem").GetComponent<LogicScript>();
+        audioSound = GetComponent<AudioSource>();        
     }
 
     // Update is called once per frame
@@ -28,4 +30,10 @@ public class player_2_Script : MonoBehaviour
             transform.Translate((Vector2.down * Time.deltaTime) * moveSpeed);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        audioSound.Play();             
+
+    }     
 }
