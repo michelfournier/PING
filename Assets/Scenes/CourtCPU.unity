@@ -3497,6 +3497,10 @@ PrefabInstance:
       propertyPath: ballCanStart
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5596849301672124741, guid: 7b3a1d8e072475547b3f2b12839cc200, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6444258312515270330, guid: 7b3a1d8e072475547b3f2b12839cc200, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.040008545

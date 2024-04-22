@@ -17,6 +17,7 @@ public class ballScript : MonoBehaviour
     void Start ()
     {
         logic = GameObject.Find("LogicSystem").GetComponent<LogicScript>();
+        myRigidBody.freezeRotation = true;
         
     }
 
