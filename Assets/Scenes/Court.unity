@@ -1215,6 +1215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   logic: {fileID: 0}
+  positionPlay1: {x: 0, y: 0, z: 0}
 --- !u!212 &582343231
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3221,6 +3222,15 @@ MonoBehaviour:
   logic: {fileID: 591464974}
   ball: {fileID: 145647978851174105, guid: 7b3a1d8e072475547b3f2b12839cc200, type: 3}
   ballDestroyed: 0
+  play1Code: {fileID: 0}
+  play2Code: {fileID: 0}
+  cpuPlayerCode: {fileID: 0}
+  startPositionPlay1: {x: 0, y: 0, z: 0}
+  startPositionPlay2: {x: 7.5, y: 0, z: 0}
+  startPositionPlayCPU: {x: 0, y: 0, z: 0}
+  player1: {fileID: 0}
+  player2: {fileID: 1976733540}
+  playerCPU: {fileID: 0}
 --- !u!1 &1638598079
 GameObject:
   m_ObjectHideFlags: 0
@@ -4218,7 +4228,7 @@ GameObject:
   - component: {fileID: 1976733547}
   m_Layer: 0
   m_Name: player2
-  m_TagString: Untagged
+  m_TagString: player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4349,6 +4359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   logic: {fileID: 0}
+  positionPlay2: {x: 0, y: 0, z: 0}
 --- !u!82 &1976733546
 AudioSource:
   m_ObjectHideFlags: 0

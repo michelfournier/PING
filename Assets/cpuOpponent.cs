@@ -21,13 +21,16 @@ public class cpuOpponent : MonoBehaviour
 
     AudioSource audioSound;
 
+    public Vector3 positionPlayCPU;
+
       
     // Start is called before the first frame update
     void Start()
     {
         transform.localPosition = (Vector3)startingPosition;
         logic = GameObject.Find("LogicSystem").GetComponent<LogicScript>();
-        audioSound = GetComponent<AudioSource>();        
+        audioSound = GetComponent<AudioSource>();
+        positionPlayCPU = transform.position;      
     }
 
     // Update is called once per frame

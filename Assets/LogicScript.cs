@@ -29,6 +29,9 @@ public class LogicScript : MonoBehaviour
     public float p2Rate; 
 
 
+    
+
+
     void Update()
     {
         if (player1Score == 11 || player2Score == 11)

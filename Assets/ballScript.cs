@@ -29,10 +29,16 @@ public class ballScript : MonoBehaviour
         ballSpeed = logic.ballRate;
         // Let's put all this in an if statement to wait for the game to start before difficulty chosen.
         if (ballCanStart == true)
-        {
-            
+        {   
+            ballServe();
+  
+        }
+    }
+
+
+    public void ballServe()
+    {
         //need to randomize the first ball of the game
-            
             bool isRight = UnityEngine.Random.value >= 0.5f; // if 0== flase, else == true
 
             float xVelocity = -1f; //default velocity toward left side
@@ -47,10 +53,8 @@ public class ballScript : MonoBehaviour
             myRigidBody.velocity = new Vector2(xVelocity * ballSpeed, yVelocity * ballSpeed);// initiate the "push" toward radom x and y value * speed
 
             ballCanStart = false;
-
-            
-        }
     }
+
 
 
 

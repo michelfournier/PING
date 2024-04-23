@@ -3111,7 +3111,7 @@ GameObject:
   - component: {fileID: 1549236805}
   m_Layer: 0
   m_Name: CPU
-  m_TagString: Untagged
+  m_TagString: player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4314,6 +4314,8 @@ MonoBehaviour:
   logic: {fileID: 123252789}
   ball: {fileID: 145647978851174105, guid: 7b3a1d8e072475547b3f2b12839cc200, type: 3}
   ballDestroyed: 0
+  play1: {fileID: 1708577629}
+  play2: {fileID: 1549236799}
 --- !u!61 &1953641036
 BoxCollider2D:
   m_ObjectHideFlags: 0

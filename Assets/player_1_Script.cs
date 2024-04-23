@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class playerScript : MonoBehaviour
 {   
@@ -9,12 +10,15 @@ public class playerScript : MonoBehaviour
     public LogicScript logic;
 
     AudioSource audioSound;
+
+    public Vector3 positionPlay1;
          
     // Start is called before the first frame update
     void Start()
     {
         logic = GameObject.Find("LogicSystem").GetComponent<LogicScript>();
         audioSound = GetComponent<AudioSource>();
+        positionPlay1 = transform.position;
     }
 
     // Update is called once per frame
